@@ -75,6 +75,42 @@
 	margin-top:100px;
 }
 
+.carousel-button-white .button{
+	margin-top:20px;
+	background-color:Transparent;
+	color:white;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:15px;
+	cursor:pointer;
+	border:1px solid white;
+}
+
+.carousel-button-white .button:hover{
+	color:black;
+	background-color:white;
+}
+
+.carousel-button-black .button{
+	margin-top:20px;
+	background-color:Transparent;
+	color:black;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:15px;
+	cursor:pointer;
+	border:1px solid black;
+}
+
+.carousel-button-black .button:hover{
+	color:white;
+	background-color:black;
+}
+
 .footer-nav{
 	background-color:#212121;
 	font-family:sans-serif;
@@ -111,7 +147,7 @@
 	margin-right:94px;
 }
 
-.button{
+#email-support .button{
 	margin-left:200px;
 	margin-top:50px;
 	color:white;
@@ -125,7 +161,7 @@
 	border:1px solid white;
 }
 
-.button:hover{
+#email-support .button:hover{
 	background-color:white;
 	color:black;
 }
