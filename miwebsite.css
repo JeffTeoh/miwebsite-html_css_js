@@ -1,5 +1,5 @@
 *{
-	//border:1px dotted white;
+	//border:1px dotted black;
 }
 
 #header{
@@ -109,6 +109,16 @@
 .carousel-button-black .button:hover{
 	color:white;
 	background-color:black;
+}
+
+.card-item img{
+	width:100%;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.card-item img:hover{
+	box-shadow: 0px 5px 5px grey;
 }
 
 .footer-nav{
