@@ -82,6 +82,21 @@
 	margin-right:94px;
 }
 
-#email-support{
-	float:right;
+.button{
+	margin-left:200px;
+	margin-top:50px;
+	color:white;
+	background-color:#212121;
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:12px;
+	cursor:pointer;
+	border:1px solid white;
+}
+
+.button:hover{
+	background-color:white;
+	color:black;
 }
