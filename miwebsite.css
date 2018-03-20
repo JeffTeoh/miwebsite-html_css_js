@@ -1,5 +1,5 @@
 *{
-	//border:1px dotted black;
+	//border:1px dotted white;
 }
 
 #header{
@@ -99,4 +99,18 @@
 .button:hover{
 	background-color:white;
 	color:black;
+}
+
+#navbarDropdown{
+	margin-top:42px;
+	margin-left:600px;
+}
+
+.dropdown-item{
+	font-size:12px;
+	color:#696969 !important;
+}
+
+.dropdown-item:hover{
+	color:red !important;
 }
