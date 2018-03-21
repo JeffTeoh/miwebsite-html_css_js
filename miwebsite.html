@@ -17,6 +17,7 @@
     <title>Xiaomi - Mi Malaysia</title>
   </head>
   <body>
+  <!--top navigation bar contain official website, sign in and sign up -->
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="header">
 		<a class="navbar-brand" href="miwebsite.html">MI MALAYSIA</a>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -31,6 +32,7 @@
 		</div>
 	</nav>
 	
+	<!--secondary navigation bar contain list of product with image-->
 	<nav class="navbar site-navigation">
 		<div class="container" style="margin-top:10px;">
 			<div class="row">
@@ -76,12 +78,13 @@
 		</div>
 	</nav>
 	
-	<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+	<!-- rolling image with press of review on products -->
+	<div id="carouselProductIndicators" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
-			<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselIndicators" data-slide-to="2"></li>
-			<li data-target="#carouselIndicators" data-slide-to="3"></li>
+			<li data-target="#carouselProductIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselProductIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselProductIndicators" data-slide-to="2"></li>
+			<li data-target="#carouselProductIndicators" data-slide-to="3"></li>
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
@@ -139,37 +142,151 @@
 				</div>
 			</div>
 		</div>
-		<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+		<a class="carousel-control-prev" href="#carouselProductIndicators" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+		<a class="carousel-control-next" href="#carouselProductIndicators" role="button" data-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
 	
+	<!-- card item for 3 products -->
 	<div class="container" style="width:100%;">
-	<div class="row">
-		<div class="col-4 card-item">
-			<a href="#">
-				<img src="cardItem/redmiNote5A.jpg"/>
-			</a>
+		<div class="row">
+			<div class="col-4 card-item nopadding">
+				<a href="#">
+					<img src="cardItem/redmiNote5A.jpg"/>
+				</a>
+			</div>
+			<div class="col-4 card-item nopadding">
+				<a href="#">
+					<img src="cardItem/miBand2.jpg" />
+				</a>
+			</div>
+			<div class="col-4 card-item nopadding">
+				<a href="#">
+					<img src="cardItem/mi6.jpg" />
+				</a>
+			</div>
 		</div>
-		<div class="col-4 card-item">
-			<a href="#">
-				<img src="cardItem/miBand2.jpg" />
-			</a>
-		</div>
-		<div class="col-4 card-item">
-			<a href="#">
-				<img src="cardItem/mi6.jpg" />
-			</a>
-		</div>
-	</div>
 	</div>
 	
-			
+	<h2 class="text-center" style="margin-top:50px; margin-bottom:30px; font-weight:lighter;">STAR PRODUCTS</h2>
+	
+	<div class="container" style="width:100%;">
+		<div class="row">
+			<div class="col-6 card-item2 nopadding">
+				<a href="#">
+					<img src="cardItem2/powerBank2.jpg"/>
+				</a>
+			</div>
+			<div class="col-3 card-item2 nopadding">
+				<a href="#">
+					<img src="cardItem2/router.jpg" />
+				</a>
+				<a href="#">
+					<img style="width:201%; height:50%; padding-left:1px;" src="cardItem2/miBox.jpg" />
+				</a>
+			</div>
+			<div class="col-3 card-item2 nopadding">
+				<a href="#">
+					<img src="cardItem2/airPurifier.jpg" />
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<h2 class="text-center" style="margin-top:50px; margin-bottom:30px; font-weight:lighter;">VIDEOS</h2>
+	
+	<!-- video card-item for 3 products -->
+	<div class="container" style="width:100%;">
+		<div class="row">
+			<div class="col-4 card-video nopadding" style="padding-right:10px !important;">
+				<a class="launchVideo" data-toggle="modal" data-target="#modalMiMax2" >
+					<img src="videoThumbnail/miMax2.jpg"/>
+					<div class="card-img-overlay text-white text-center">
+						<i class="fa fa-play-circle" style="font-size:100px;"></i>
+						<p>Mi Max 2</p>
+					</div>
+				</a>		
+				
+				<!-- Modal -->
+				<div class="modal fade" id="modalMiMax2" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<p>MI MAX 2</p>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<iframe type="text/html" width="auto" height="auto" src="http://www.youtube.com/embed/YL3GEsqGtJk" frameborder="0" allowfullscreen=""></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 card-video nopadding">
+				<a class="launchVideo" data-toggle="modal" data-target="#modalMi6" >
+					<img src="videoThumbnail/mi6.jpg"/>
+					<div class="card-img-overlay text-white text-center">
+						<i class="fa fa-play-circle" style="font-size:100px;"></i>
+						<p>Mi 6</p>
+					</div>
+				</a>
+				
+				<!-- Modal -->
+				<div class="modal fade" id="modalMi6" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<p>MI 6</p>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<iframe type="text/html" width="640" height="480" src="http://www.youtube.com/embed/n61peaBWmGY" frameborder="0" allowfullscreen=""></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 card-video nopadding" style="padding-left:10px !important;">
+				<a class="launchVideo" data-toggle="modal" data-target="#modalRedmiNote4" >
+					<img src="videoThumbnail/redmiNote4.jpg"/>
+					<div class="card-img-overlay text-white text-center">
+						<i class="fa fa-play-circle" style="font-size:100px;"></i>
+						<p>Redmi Note 4</p>
+					</div>
+				</a>
+				
+				<!-- Modal -->
+				<div class="modal fade" id="modalRedmiNote4" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<p>REDMI NOTE 4</p>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<iframe type="text/html" width="640" height="480" src="http://www.youtube.com/embed/TQmfRs9yHmk" frameborder="0" allowfullscreen=""></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<h2 class="text-center" style="margin-top:50px; margin-bottom:30px; font-weight:lighter;">IN THE PRESS</h2>
+	
+	
 	
 	<div class="footer-nav bottom">
 		<div class="container">
@@ -228,6 +345,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="container">
 			<div class="row" style="border-top:1px solid white;">
 				<dl class="span">
@@ -269,5 +387,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
   </body>
 </html>

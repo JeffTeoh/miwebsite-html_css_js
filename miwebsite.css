@@ -113,12 +113,49 @@
 
 .card-item img{
 	width:100%;
-	margin-top:10px;
 	margin-bottom:10px;
+	margin-top:10px;
 }
 
 .card-item img:hover{
 	box-shadow: 0px 5px 5px grey;
+}
+
+.card-item2 img{
+	width:100%;
+}
+
+.card-item2 img:hover{
+	box-shadow: 0px 5px 5px grey;
+}
+
+.nopadding{
+	padding:1px !important;
+}
+
+.card-video{
+	height:300px;
+}
+
+.card-video img{
+	width:100%;
+	height:100%;
+}
+
+.modal-header p{
+	margin:0 auto;
+}
+
+.card-img-overlay{
+	margin-top:80px;
+}
+
+.card-img-overlay i{
+	color:grey;
+}
+
+.card-img-overlay i:hover{
+	color:white;
 }
 
 .footer-nav{
