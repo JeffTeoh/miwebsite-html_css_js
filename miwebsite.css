@@ -176,6 +176,15 @@
 	width:5%;
 }
 
+.warranty{
+	opacity:0.5;
+	text-decoration:none;
+}
+
+.warranty:hover{
+	opacity:0.8;
+}
+
 .footer-nav{
 	background-color:#212121;
 	font-family:sans-serif;
