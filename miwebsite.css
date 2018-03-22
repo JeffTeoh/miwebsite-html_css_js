@@ -185,6 +185,17 @@
 	opacity:0.8;
 }
 
+.input-group-addon-btn{
+	padding:0;
+	
+	button{
+		border:none;
+		background:transparent;
+		cursor:pointer;
+		height:100%;
+	}
+}
+
 .footer-nav{
 	background-color:#212121;
 	font-family:sans-serif;
