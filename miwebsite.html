@@ -200,11 +200,11 @@
 	
 	<h2 class="text-center" style="margin-top:50px; margin-bottom:30px; font-weight:lighter;">VIDEOS</h2>
 	
-	<!-- video card-item for 3 products -->
+	<!-- video modal for 3 products -->
 	<div class="container" style="width:100%;">
 		<div class="row">
 			<div class="col-4 card-video nopadding" style="padding-right:10px !important;">
-				<a class="launchVideo" data-toggle="modal" data-target="#modalMiMax2" >
+				<a class="launchVideo" data-modal-id="modal-video" data-toggle="modal" data-target="#modalMiMax2" >
 					<img src="videoThumbnail/miMax2.jpg"/>
 					<div class="card-img-overlay text-white text-center">
 						<i class="fa fa-play-circle" style="font-size:100px;"></i>
@@ -217,13 +217,15 @@
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<p>MI MAX 2</p>
+								MI MAX 2
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div class="modal-body">
-								<iframe type="text/html" width="auto" height="auto" src="http://www.youtube.com/embed/YL3GEsqGtJk" frameborder="0" allowfullscreen=""></iframe>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe id="video-frame" class="embed-responsive-item" src="http://www.youtube.com/embed/YL3GEsqGtJk"></iframe>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -249,7 +251,9 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<iframe type="text/html" width="640" height="480" src="http://www.youtube.com/embed/n61peaBWmGY" frameborder="0" allowfullscreen=""></iframe>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/n61peaBWmGY"></iframe>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -275,7 +279,9 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<iframe type="text/html" width="640" height="480" src="http://www.youtube.com/embed/TQmfRs9yHmk" frameborder="0" allowfullscreen=""></iframe>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/TQmfRs9yHmk"></iframe>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -495,11 +501,26 @@
 	
 	
 
-    <!-- Optional JavaScript -->
+    <!-- JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			// open the modal
+			$('.launchVideo').on('click', function(e){
+				e.preventDefault();
+				$( '#' + $(this).data('modal-id') ).modal();
+			}); 
+			// reload the modal contents when it is closed
+			$("#modal-video").on("hidden.bs.modal", function () {
+				var url = $('#video-frame').attr('src');
+				$('#video-frame').attr('src', '');
+				$('#video-frame').attr('src', url);
+			});
+		});
+	</script>
 	
   </body>
 </html>
