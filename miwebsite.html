@@ -20,7 +20,7 @@
   <body>
 	
 	<!--top navigation bar contain official website, sign in and sign up -->
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark top-nav">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -41,6 +41,26 @@
 	</nav>
 		
 	<!--secondary navigation bar contain list of product with image-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#"><img src="mihomesm.png"/></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#categories" aria-controls="categories" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse categories" id="categories">
+			<ul class="navbar-nav mr-auto"></ul>
+			<div class="navbar-nav">
+				<a class="nav-item nav-link px-3" href="#">Mi Phones</a>
+				<a class="nav-item nav-link px-3" href="#">Redmi Phones</a>
+				<a class="nav-item nav-link px-3" href="#">Audio</a>
+				<a class="nav-item nav-link px-3" href="#">Smart Devices</a>
+				<a class="nav-item nav-link px-3" href="#">Mi Power Bank</a>
+				<a class="nav-item nav-link px-3" href="#">Where to Buy</a>
+				<a class="nav-item nav-link px-3" href="#">Support</a>
+			</div>
+		</div>
+	</nav>
+	
 	<!--nav class="navbar site-navigation">
 		<div class="container" style="margin-top:10px;">
 			<div class="row">
@@ -49,7 +69,7 @@
 				</dl>
 				<dl class="navi-item" style="margin-left:300px;">
 					<dd>
-						<a href="#miPhones" data-toggle="collapse" aria-expanded="false" aria-controls="miPhones">Mi Phones</a>
+						<a href="#miPhones">Mi Phones</a>
 					</dd>
 				</dl>
 				<dl class="navi-item">
@@ -87,7 +107,7 @@
 	</nav-->
 	
 	<!-- Mi Phone collapse collection -->
-	<div class="collapse" id="miPhones" style="margin-top:95px;">
+	<!--div class="collapse" id="miPhones" style="margin-top:95px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-2">
@@ -122,7 +142,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div-->
 	
 	<!-- rolling image with top sales products -->
 	<div id="carouselProductIndicators" class="carousel slide" data-ride="carousel">

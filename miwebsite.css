@@ -1,17 +1,8 @@
 *{
-	//border:1px dotted white;
+	//border:1px dotted black;
 }
 
 @media (max-width:767px){
-	
-	.footer-nav .span{
-		text-align:center;
-	}
-	
-	#navbarDropdown{
-		margin-left:30px;
-	}
-	
 	.card-item2 img{
 		margin-top:5px;
 		margin-bottom:5px;
@@ -20,10 +11,18 @@
 	.card-video{
 		margin-bottom:10px;
 	}
+	
+	.footer-nav .span{
+		text-align:center;
+	}
+	
+	#navbarDropdown{
+		margin-left:30px;
+	}
 }
 
 @media (min-width:768px){
-	.navbar{
+	.top-nav{
 		height:40px;
 	}
 	
@@ -32,6 +31,10 @@
 		border:0.5px solid white;
 		height:12px;
 		opacity:0.2;
+	}
+	
+	.navbar-brand{
+		margin-left:50px;
 	}
 	
 	#miBox img{
@@ -49,22 +52,25 @@
 	margin-right:45px;
 }
 
-.collapse a{
+.top-nav .collapse a{
 	font-family:sans-serif;
+	font-size:12px;
+	text-decoration:none;
+	color:black;
 }
 
 /* secondary navigation bar with list of categories */
-.site-navigation{
-	position:absolute;
+.categories{
 	z-index:10;
 	width:100%;
+	background:transparent;
 }
 
-.site-navigation:hover{
-	background:white;
+.categories:hover{
+	
 }
 
-.site-navigation a{
+.categories a{
 	text-decoration:none;
 	color:#333333;
 	font-size:12px;
@@ -72,11 +78,6 @@
 	font-family:sans-serif;
 }
 
-.collapse a{
-	font-size:12px;
-	text-decoration:none;
-	color:black;
-}
 
 #carouselProductIndicators{
 	top:0;
