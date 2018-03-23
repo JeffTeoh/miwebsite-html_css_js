@@ -2,8 +2,27 @@
 	//border:1px dotted black;
 }
 
+@media (max-width:767px){
+	.footer-nav .span{
+		text-align:center;
+	}
+	
+	#navbarDropdown{
+		margin-left:30px;
+	}
+	
+	.card-item2 img{
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+	
+	.card-video img{
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+}
+
 #header{
-	padding-left:60px;
 	padding-top:11px !important;
 	padding-bottom:11px !important;
 	background-color:#000000 !important;
@@ -46,6 +65,15 @@
 	padding-left:20px;
 }
 
+.site-navigation{
+	position:absolute;
+	z-index:10;
+	width:100%;
+}
+
+.site-navigation:hover{
+	background:white;
+}
 
 .site-navigation a{
 	text-decoration:none;
@@ -53,6 +81,21 @@
 	font-size:12px;
 	font-weight:bold;
 	font-family:sans-serif;
+}
+
+.collapse a{
+	font-size:12px;
+	text-decoration:none;
+	color:black;
+}
+
+#carouselProductIndicators{
+	top:0;
+}
+
+#carouselProductIndicators .carousel-inner{
+	width:100%;
+	overflow:hidden;
 }
 
 .navi-item{
@@ -128,15 +171,11 @@
 }
 
 .card-item2 img{
-	width:100%;
+	width:100%;	
 }
 
 .card-item2 img:hover{
 	box-shadow: 0px 5px 5px grey;
-}
-
-.nopadding{
-	padding:1px !important;
 }
 
 .card-video{
@@ -204,6 +243,10 @@
 	color:white;
 }
 
+.modal-dialog{
+	max-width:800px;
+}
+
 #carouselPressIndicators{
 	margin-bottom:50px;
 }
@@ -267,21 +310,9 @@
 	margin-bottom:20px;
 }
 
-#span1{
-	margin-right:20px;
-}
-
-#span2{
-	margin-right:87px;
-}
-
-#span3{
-	margin-right:94px;
-}
-
 #email-support .button{
-	margin-left:200px;
 	margin-top:50px;
+	margin-bottom:50px;
 	color:white;
 	background-color:#212121;
 	padding-left:30px;
@@ -300,7 +331,6 @@
 
 #navbarDropdown{
 	margin-top:42px;
-	margin-left:600px;
 }
 
 .dropdown-item{
@@ -310,4 +340,14 @@
 
 .dropdown-item:hover{
 	color:red !important;
+}
+
+/*for not making 2nd line of text*/
+.no-space-break{
+	white-space:nowrap;
+}
+
+/*reduce padding of item in container*/
+.nopadding{
+	padding:1px !important;
 }
