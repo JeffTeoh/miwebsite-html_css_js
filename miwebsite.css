@@ -1,8 +1,9 @@
 *{
-	//border:1px dotted black;
+	//border:1px dotted white;
 }
 
 @media (max-width:767px){
+	
 	.footer-nav .span{
 		text-align:center;
 	}
@@ -16,61 +17,43 @@
 		margin-bottom:5px;
 	}
 	
-	.card-video img{
-		margin-top:5px;
-		margin-bottom:5px;
+	.card-video{
+		margin-bottom:10px;
 	}
 }
 
 @media (min-width:768px){
+	.navbar{
+		height:40px;
+	}
+	
+	.divider{
+		margin-top:11px;
+		border:0.5px solid white;
+		height:12px;
+		opacity:0.2;
+	}
+	
 	#miBox img{
 		width:201%;
 	}
 }
 
-#header{
-	padding-top:11px !important;
-	padding-bottom:11px !important;
-	background-color:#000000 !important;
+/* top navigation bar */
+.bg-dark{
+	background-color:#212121 !important;
 }
 
-.navbar-brand{
-	padding-top:0px;
-	padding-bottom:0px;
-	padding-right:25px;
-	font-size:11px;
-	font-family:sans-serif;
-	border-right:1px solid #696969;
+.collapse{
+	margin-left:20px;
+	margin-right:45px;
 }
 
-.nav-item{
-	padding:0px;
-	font-size:11px;
+.collapse a{
 	font-family:sans-serif;
 }
 
-#miui{
-	padding-right:25px;
-	border-right:1px solid #696969;
-}
-
-#facebook{
-	padding-left:20px;
-}
-
-.right-side{
-	margin-right:70px;
-}
-
-#signin{
-	border-right:1px solid #696969;
-	padding-right:20px;
-}
-
-#signout{
-	padding-left:20px;
-}
-
+/* secondary navigation bar with list of categories */
 .site-navigation{
 	position:absolute;
 	z-index:10;
@@ -280,16 +263,8 @@
 	opacity:0.8;
 }
 
-.input-group-addon-btn{
-	padding:0;
-	
-	button{
-		margin:0;
-		background-color:transparent;
-		cursor:pointer;
-		height:100%;
-		border:none;
-	}
+.btn{
+	border:1px solid #cde4da;
 }
 
 .footer-nav{
