@@ -17,6 +17,11 @@
 		margin-bottom:10px;
 	}
 	
+	/* create space for warranty (Follow MI) in small screen */
+	.mresponsive{
+		margin-top:10px;
+	}
+	
 	.footer-nav .span{
 		text-align:center;
 	}
@@ -42,7 +47,7 @@
 		opacity:0.2;
 	}
 	
-	/* logo of mi positioning */
+	/* positioning of mi logo */
 	.navbar-brand{
 		margin-left:50px;
 	}
@@ -58,6 +63,11 @@
 	#miBox img{
 		width:201%;
 	}
+}
+
+/* change background color of whole page */
+body{
+	background-color:#f5f5f5;
 }
 
 /* top navigation bar */
@@ -82,16 +92,29 @@
 	width:100%;
 }
 
-.categories:hover{
-	
-}
-
 .categories a{
 	font-weight:bold;
 	font-family:sans-serif;
 }
 
+/* mega menu for categories */
+.navbar .mega-dropdown{				 /* make menu under the whole navigation bar */
+	position:static !important;
+	z-index:10;
+}
 
+.navbar .dropdown-menu.mega-menu{
+	width:100%;
+	border:none;
+	border-radius:0;
+}
+
+.dropdown-toggle::after{
+	display:none;
+}
+/****************************/
+
+/* carousel items */
 #carouselProductIndicators{
 	top:0;
 }
@@ -123,8 +146,7 @@
 
 .product-caption{
 	font-weight:lighter;
-	top:0;
-	margin-top:100px;
+	top:100px;
 }
 
 .carousel-button-white .button{
@@ -255,8 +277,7 @@
 }
 
 .press-caption{
-	top:0;
-	margin-top:20px;
+	top:50px;
 }
 
 .press-caption p{
@@ -345,4 +366,11 @@
 /*reduce padding of item in container*/
 .nopadding{
 	padding:1px !important;
+}
+
+/*center content*/
+.center{
+	margin:auto;
+	width:100%;
+	padding:5px;
 }
