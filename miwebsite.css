@@ -22,6 +22,12 @@
 	}
 }
 
+@media (min-width:768px){
+	#miBox img{
+		width:201%;
+	}
+}
+
 #header{
 	padding-top:11px !important;
 	padding-bottom:11px !important;
