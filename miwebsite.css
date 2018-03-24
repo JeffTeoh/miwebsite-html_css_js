@@ -93,8 +93,13 @@ body{
 }
 
 .categories a{
+	color:#616161;
 	font-weight:bold;
 	font-family:sans-serif;
+}
+
+.categories a:hover{
+	color:red;
 }
 
 /* mega menu for categories */
@@ -111,6 +116,14 @@ body{
 
 .dropdown-toggle::after{
 	display:none;
+}
+
+#categories .nav-item a{
+	color:#616161 !important;
+}
+
+#categories .nav-item a:hover{
+	color:red !important;
 }
 /****************************/
 
@@ -212,7 +225,7 @@ body{
 	height:100%;
 }
 
-/*For modal*/
+/*Modal dialog*/
 
 .modal-backdrop.in{
 	filter:alpha(opacity=7);
@@ -227,13 +240,13 @@ body{
 }
 
 .modal-body{
-	padding:0 25px 25px 25px;
+	padding:0;
 }
 
-.modal-header{
+.modal-header p{
 	color:white;
-	padding:25px 25px 15px 25px;
 	text-align:right;
+	margin:auto;
 }
 
 .modal-header, .modal-footer{
@@ -241,6 +254,7 @@ body{
 }
 
 .modal-header .close{
+	border-radius:50%;
 	float:none;
 	margin:0;
 	font-size:36px;
