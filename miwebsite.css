@@ -3,9 +3,26 @@
 }
 
 @media (max-width:767px){
-	
 	.categories{
 		position:relative;
+	}
+	
+	.carousel-caption{
+		top:0;
+		font-size:8px;
+		margin-bottom:0.1rem !important;
+	}
+	
+	.carousel-caption h1, h3{
+		font-size:12px !important;
+	}
+	
+	.carousel-button-white .button{
+		font-size:8px;
+	}
+	
+	.carousel-button-black .button{
+		font-size:8px;
 	}
 	
 	.card-item2 img{
@@ -31,7 +48,7 @@
 	}
 }
 
-@media (min-width:768px){
+@media (min-width:768px){	
 	.top-nav{
 		height:40px;
 	}
@@ -60,8 +77,18 @@
 		font-size:12px;
 	}
 	
+	.carousel-caption{
+		font-size:10px;
+	}
+	
 	#miBox img{
-		width:201%;
+		width:205%;
+	}
+}
+
+@media (min-width:1200px){
+	.carousel-caption{
+		font-size:15px;
 	}
 }
 
@@ -159,18 +186,12 @@ body{
 
 .product-caption{
 	font-weight:lighter;
-	top:100px;
+	bottom:20%;
 }
 
 .carousel-button-white .button{
-	margin-top:20px;
 	background-color:Transparent;
 	color:white;
-	padding-left:50px;
-	padding-right:50px;
-	padding-top:5px;
-	padding-bottom:5px;
-	font-size:15px;
 	cursor:pointer;
 	border:1px solid white;
 }
@@ -181,14 +202,8 @@ body{
 }
 
 .carousel-button-black .button{
-	margin-top:20px;
 	background-color:Transparent;
 	color:black;
-	padding-left:50px;
-	padding-right:50px;
-	padding-top:5px;
-	padding-bottom:5px;
-	font-size:15px;
 	cursor:pointer;
 	border:1px solid black;
 }
@@ -300,7 +315,7 @@ body{
 
 .press-caption hr{
 	border:0.5px solid white;
-	width:5%;
+	width:1%;
 }
 
 .warranty{
