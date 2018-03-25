@@ -7,7 +7,7 @@
 		position:relative;
 	}
 	
-	.carousel-caption{
+	.product-caption{
 		top:0;
 		font-size:8px;
 		margin-bottom:0.1rem !important;
@@ -77,6 +77,10 @@
 		font-size:12px;
 	}
 	
+	.carousel-caption h1, h3{
+		font-size:1.25rem !important;
+	}
+	
 	.carousel-caption{
 		font-size:10px;
 	}
@@ -84,9 +88,21 @@
 	#miBox img{
 		width:205%;
 	}
+	
+	#carouselPressIndicators .carousel-inner .carousel-item img{
+		height:100%;
+	}
 }
 
 @media (min-width:1200px){
+	.carousel-caption h1{
+		font-size:2.5rem !important;
+	}
+	
+	.carousel-caption h3{
+		font-size:1.75rem !important;
+	}
+	
 	.carousel-caption{
 		font-size:15px;
 	}
