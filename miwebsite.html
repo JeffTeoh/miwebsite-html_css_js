@@ -56,7 +56,7 @@
 			<ul class="navbar-nav mr-auto"></ul>
 			<div class="nav-item dropdown mega-dropdown">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-4" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Phones</a>
-				<div class="dropdown-menu mega-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink1">
+				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink1">
 					<div class="row mx-md-4 mx-1">
 						<div class="col-md-6 col-xl-2 sub-menu my-xl-5 mt-5 mb-4">
 							<div class="caret-style pl-0">
@@ -103,7 +103,7 @@
 			</div> <!-- /nav-item dropdown mega-dropdown -->
 			<div class="nav-item dropdown mega-dropdown">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-4" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Redmi Phones</a>
-				<div class="dropdown-menu mega-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink2">
+				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink2">
 					<div class="row mx-md-4 mx-1">
 						<div class="col-md-6 col-xl-2 sub-menu my-xl-5 mt-5 mb-4">
 							<div class="caret-style pl-0">
@@ -150,7 +150,7 @@
 			</div> <!-- /nav-item dropdown mega-dropdown -->
 			<div class="nav-item dropdown mega-dropdown">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-4" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Audio</a>
-				<div class="dropdown-menu mega-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink3">
+				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink3">
 					<div class="row mx-md-4 mx-1">
 						<div class="col-md-6 col-xl-2 sub-menu my-xl-5 mt-5 mb-4">
 							<div class="caret-style pl-0">
@@ -189,7 +189,7 @@
 			</div> <!-- /nav-item dropdown mega-dropdown -->
 			<div class="nav-item dropdown mega-dropdown">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-4" id="navbarDropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Smart Devices</a>
-				<div class="dropdown-menu mega-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink4">
+				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink4">
 					<div class="row mx-md-4 mx-1">
 						<div class="col-md-6 col-xl-2 sub-menu my-xl-5 mt-5 mb-4">
 							<div class="caret-style pl-0">
@@ -244,7 +244,7 @@
 			</div> <!-- /nav-item dropdown mega-dropdown -->
 			<div class="nav-item dropdown mega-dropdown">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-4" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Power Bank</a>
-				<div class="dropdown-menu mega-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink5">
+				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink5">
 					<div class="row mx-md-4 mx-1">
 						<div class="col-md-6 col-xl-2 sub-menu my-xl-5 mt-5 mb-4">
 							<div class="caret-style pl-0">
@@ -295,7 +295,7 @@
 			<li data-target="#carouselProductIndicators" data-slide-to="3"></li>
 		</ol>
 		<div class="carousel-inner">
-			<div class="carousel-item item active" id="carousel-first">
+			<div class="carousel-item item active" data-color="white">
 				<img class="d-block w-100" src="carousel-item/first.jpg" alt="First slide">
 				<div class="carousel-caption text-left product-caption">
 					<h1 style="font-weight:lighter; margin-bottom:1%;">Redmi 5 Plus</h1>
@@ -614,7 +614,7 @@
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Enter Email Address" aria-label="Enter Email Address" aria-describedby="basic-addon">
 					<div class="input-group-append">
-						<button class="btn btn-outline-secondary" type="button">
+						<button class="btn" type="button">
 							<i class="fa fa-angle-right" aria-hidden="true"></i>
 						</button>
 					</div>
@@ -757,13 +757,22 @@
 			}
 		});
 		
+		/*$('.dropdown').hover(function(e){
+			e.preventDefault();
+			
+			$(this).siblings().children('.dropdown-menu').removeClass('active').next().slideUp();
+			$(this).find('.dropdown-menu').toggleClass('active').next().slideToggle();
+			
+			e.stopPropogation();
+		});*/
+		
 		$('.hover-link').on('mouseover',function(){
 			$(this).parents().addClass('is-hover');
 		}).on('mouseout', function(){
 			$(this).parents().removeClass('is-hover');
 		});
 		
-		$('.dropdown-menu').on('mouseover',function(){
+		$('.phone-menu').on('mouseover',function(){
 			$(this).parents().addClass('is-hover');
 		}).on('mouseout', function(){
 			$(this).parents().removeClass('is-hover');
@@ -771,9 +780,16 @@
 		
 		/*var firstCarousel = document.getElementById("carousel-first");
 		if ($('.carousel-item') === firstCarousel){
-			$(".nav-item").style.color = 'white';
+			$(".nav-item").find('a').style.color = 'white';
 		}*/
 		
+		$('#carouselProductIndicator').carousel();
+		$('#carouselProductIndicator').bind('slid', function() {
+			dcolor = $('.active').data('color');
+			$('.hover-link').css('color', dcolor);
+		});
+		
+		/* stop playing video while closing modal and reset the link of youtube video */
 		$(document).ready(function(){
 			$('.modal').each(function(){
 				var src = $(this).find('iframe').attr('src');
@@ -784,7 +800,6 @@
 				});
 			});
 		});
-		
 	</script>
 	
   </body>
