@@ -51,7 +51,7 @@
 		<!-- Collapsible content -->
 		<div class="collapse navbar-collapse" id="categories">
 			<ul class="navbar-nav mr-auto"></ul>
-			<div class="nav-item dropdown mega-dropdown py-3">
+			<div class="nav-item dropdown mega-dropdown py-lg-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Phones</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink1">
 					<div class="row mx-md-4 mx-1">
@@ -98,7 +98,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown py-3">
+			<div class="nav-item dropdown mega-dropdown py-lg-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Redmi Phones</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink2">
 					<div class="row mx-md-4 mx-1">
@@ -145,7 +145,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown py-3">
+			<div class="nav-item dropdown mega-dropdown py-lg-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Audio</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink3">
 					<div class="row mx-md-4 mx-1">
@@ -184,7 +184,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown py-3">
+			<div class="nav-item dropdown mega-dropdown py-lg-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Smart Devices</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink4">
 					<div class="row mx-md-4 mx-1">
@@ -239,7 +239,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown py-3">
+			<div class="nav-item dropdown mega-dropdown py-lg-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Power Bank</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink5">
 					<div class="row mx-md-4 mx-1">
@@ -292,7 +292,7 @@
 			<li data-target="#carouselProductIndicators" data-slide-to="3"></li>
 		</ol>
 		<div class="carousel-inner">
-			<div class="carousel-item active" data-color="white">
+			<div class="carousel-item active" id="carousel-first">
 				<img class="d-block w-100" src="carousel-item/first.jpg" alt="First slide">
 				<div class="carousel-caption text-left product-caption">
 					<h1 style="font-weight:lighter; margin-bottom:1%;">Redmi 5 Plus</h1>
@@ -747,49 +747,38 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script>	
-		/*$('.dropdown').hover(function() {
-			if (!($(this).hasClass('open'))) {
-				$('.dropdown-toggle', this).trigger('click');
-			}
-		}, function() {
-			if ($(this).hasClass('open')) {
-				$('.dropdown-toggle', this).trigger('click');
-			}
-		});*/
-		
-		/*$('.dropdown').hover(function(e){
-			e.preventDefault();
-			
-			$(this).siblings().children('.dropdown-menu').removeClass('active').next().slideUp();
-			$(this).find('.dropdown-menu').toggleClass('active').next().slideToggle();
-			
-			e.stopPropogation();
-		});*/
-		
+	<script>		
 		$('.dropdown').on('mouseover',function(){
 			$(this).parents().addClass('is-hover');
 		}).on('mouseout', function(){
 			$(this).parents().removeClass('is-hover');
 		});
 		
-		/*$('.phone-menu').on('mouseover',function(){
-			$(this).parents().addClass('is-hover');
-		}).on('mouseout', function(){
-			$(this).parents().removeClass('is-hover');
-		});*/
+		//console.log($('carousel-first').hasClass('active'));
+		//var firstCarousel = document.getElementById("carousel-first");
+		//var dcolor = $('.active').data('color');
+		$('#carouselProductIndicators').carousel();
+		$('#carouselProductIndicators').on('slid.bs.carousel', function (e) {
+				if($(".active", e.target).index() !== 0){
+					$('.categories').find('a').css('color','#616161');
+				} else {
+					$('.categories').find('a').css('color','white');
+				}
+		});
 		
-		/*var firstCarousel = document.getElementById("carousel-first");
-		console.log(firstCarousel);
-		if ($('.carousel-item') === firstCarousel){
-			$(".nav-item").find('a').style.color = 'white';
+		
+		/*if(('.categories').hasClass('is-hover')){
+			$('.categories').find('a').css('color','#616161');
 		}*/
 		
-		$('#carouselProductIndicator').carousel();
-		$('#carouselProductIndicator').bind('slid', function() {
+		/*if ($('carousel-first').hasClass('active')){
+			$('.hover-link').find('a').style.color = "white";
+		}*/
+		
+		/*$('#carouselProductIndicator').on('slid.bs.carousel', function() {
 			dcolor = $('.active').data('color');
 			$('.hover-link').css('color', dcolor);
-		});
+		});*/
 		
 		/* stop playing video while closing modal and reset the link of youtube video */
 		$(document).ready(function(){
