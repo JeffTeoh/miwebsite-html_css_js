@@ -747,28 +747,40 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script>		
-		$('.dropdown').on('mouseover',function(){
-			$(this).parents().addClass('is-hover');
-		}).on('mouseout', function(){
-			$(this).parents().removeClass('is-hover');
-		});
-		
+	<script>
 		//console.log($('carousel-first').hasClass('active'));
 		//var firstCarousel = document.getElementById("carousel-first");
 		//var dcolor = $('.active').data('color');
+		var carouselIndex = 0;
 		$('#carouselProductIndicators').carousel();
 		$('#carouselProductIndicators').on('slid.bs.carousel', function (e) {
-				if($(".active", e.target).index() !== 0){
-					$('.categories').find('a').css('color','#616161');
-				} else {
-					$('.categories').find('a').css('color','white');
-				}
+			if($(".active", e.target).index() !== 0){
+				$('.categories').find('a').css('color','#616161');
+			} else {
+				$('.categories').find('a').css('color','white');
+			}
+			carouselIndex = $(".active", e.target).index();
+			console.log(carouselIndex);
 		});
 		
-		
-		/*if(('.categories').hasClass('is-hover')){
+		$('.dropdown').on('mouseover',function(){
+			$(this).parents().addClass('is-hover');
 			$('.categories').find('a').css('color','#616161');
+		}).on('mouseout', function(){
+			$(this).parents().removeClass('is-hover');
+			console.log(carouselIndex + " text");
+			if(carouselIndex === 0){
+				$('.categories').find('a').css('color','white');
+			}
+			//$('.categories').find('a').css('color',oriColor);
+		});
+		
+		/*$('#categories').collapse();*/
+		/*if($('#categories').hasClass('is-hover')){
+			//$('.categories').find('a').css('color','#616161');
+			console.log("hello");
+		}else{
+			console.log("byebye");
 		}*/
 		
 		/*if ($('carousel-first').hasClass('active')){
