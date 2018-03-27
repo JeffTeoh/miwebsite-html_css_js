@@ -173,8 +173,16 @@ body{
 	border-radius:0;
 }
 
-.dropdown:hover > .dropdown-menu{
+.dropdown-menu{
+	display:none;
+}
+
+.dropdown:hover .dropdown-menu{
 	display:block;
+}
+
+#categories .nav-link{
+	padding-bottom:2rem;
 }
 
 .dropdown-toggle::after{
