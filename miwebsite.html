@@ -51,7 +51,7 @@
 		<!-- Collapsible content -->
 		<div class="collapse navbar-collapse" id="categories">
 			<ul class="navbar-nav mr-auto"></ul>
-			<div class="nav-item dropdown mega-dropdown">
+			<div class="nav-item dropdown mega-dropdown py-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Phones</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink1">
 					<div class="row mx-md-4 mx-1">
@@ -98,7 +98,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown">
+			<div class="nav-item dropdown mega-dropdown py-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Redmi Phones</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink2">
 					<div class="row mx-md-4 mx-1">
@@ -145,7 +145,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown">
+			<div class="nav-item dropdown mega-dropdown py-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Audio</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink3">
 					<div class="row mx-md-4 mx-1">
@@ -184,7 +184,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown">
+			<div class="nav-item dropdown mega-dropdown py-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Smart Devices</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink4">
 					<div class="row mx-md-4 mx-1">
@@ -239,7 +239,7 @@
 					</div>
 				</div>
 			</div> <!-- /nav-item dropdown mega-dropdown -->
-			<div class="nav-item dropdown mega-dropdown">
+			<div class="nav-item dropdown mega-dropdown py-3">
 				<a class="nav-link dropdown-toggle no-caret hover-link px-lg-4" id="navbarDropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi Power Bank</a>
 				<div class="dropdown-menu mega-menu phone-menu mt-lg-0 v-2 row z-depth-1 special-color" aria-labelledby="navbarDropdownMenuLink5">
 					<div class="row mx-md-4 mx-1">
@@ -767,19 +767,20 @@
 			e.stopPropogation();
 		});*/
 		
-		$('.hover-link').on('mouseover',function(){
+		$('.dropdown').on('mouseover',function(){
 			$(this).parents().addClass('is-hover');
 		}).on('mouseout', function(){
 			$(this).parents().removeClass('is-hover');
 		});
 		
-		$('.phone-menu').on('mouseover',function(){
+		/*$('.phone-menu').on('mouseover',function(){
 			$(this).parents().addClass('is-hover');
 		}).on('mouseout', function(){
 			$(this).parents().removeClass('is-hover');
-		});
+		});*/
 		
 		/*var firstCarousel = document.getElementById("carousel-first");
+		console.log(firstCarousel);
 		if ($('.carousel-item') === firstCarousel){
 			$(".nav-item").find('a').style.color = 'white';
 		}*/

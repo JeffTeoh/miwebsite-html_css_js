@@ -134,11 +134,6 @@ body{
 	background-color:#212121 !important;
 }
 
-.collapse{
-	margin-left:20px;
-	margin-right:45px;
-}
-
 .top-nav .collapse a{
 	font-family:sans-serif;
 	text-decoration:none;
@@ -149,6 +144,7 @@ body{
 .categories{
 	z-index:10;
 	width:100%;
+	padding-bottom:0;
 }
 
 .categories a{
@@ -179,10 +175,6 @@ body{
 
 .dropdown:hover .dropdown-menu{
 	display:block;
-}
-
-#categories .nav-link{
-	padding-bottom:2rem;
 }
 
 .dropdown-toggle::after{
